@@ -50,11 +50,21 @@ h3 {
     width: 600px;
 }
 #topbar {
-    height: 150px;
+    height: 100px;
     width: 100%;
+    padding-top: 50px;
     background-color: white;
     position: relative;
     top: -200px;
+}
+.left, .right {
+    display: inline-block;
+    /* background-color: lightgreen; */
+    width: 40%;
+}
+.left p, .right p, table tr td {
+    color: goldenrod;
+    font-family: Nanum Gothic;
 }
 ul {
     margin-top: 5px;
@@ -77,24 +87,9 @@ p {
 
 #bottombar {
     height: 150px;
-    width: 100%;
+    width: 50%;
     background-color: white;
     padding: 50px 25% 0 25%;
-}
-#bottombar table {
-    width: 50%;
-}
-table p, table tr td {
-    color: goldenrod;
-    font-family: Nanum Gothic;
-    text-align: left;
-}
-#left, #right {
-    display: inline-block;
-    /* background-color: lightgreen; */
-    height: 150px;
-    width: 40%;
-    padding-top: 50px;
 }
 .nav {
     font-family: Nanum Gothic;
