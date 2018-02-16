@@ -9,6 +9,7 @@ body {
     background-image: url('Screenshot_20180205-221352.png');
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: center center;
     height: 800px;
 }
 #splash {
@@ -38,7 +39,22 @@ h3 {
     font-family: Poiret One;
     font-size: 1.5rem;
     color: goldenrod;
-    width: 100%;
+    margin-left: 25%;
+    width: 50%;
+    background-color: white;
+}
+h4 {
+    font-family: Poiret One;
+    color: white;
+    font-size: 1rem;
+}
+#services-content {
+    text-align: center;
+}
+table {
+    margin-left: 25%;
+}
+td h3 {
     background-color: white;
 }
 .headercontainer {
@@ -59,7 +75,7 @@ h3 {
     /* background-color: lightgreen; */
     width: 40%;
 }
-.left p, .right p, table tr td {
+.goldennanum {
     color: goldenrod;
     font-family: Nanum Gothic;
 }
