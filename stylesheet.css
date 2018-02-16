@@ -10,7 +10,6 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
-    height: 800px;
 }
 /* #splash {
     width: 100%;
@@ -102,7 +101,7 @@ p {
     height: auto;
     width: 50%;
     background-color: white;
-    padding: 50px 25% 0 25%;
+    padding: 50px 25% 50px 25%;
 }
 .nav {
     font-family: Nanum Gothic;
