@@ -99,7 +99,7 @@ p {
 }
 
 #bottombar {
-    height: 150px;
+    height: auto;
     width: 50%;
     background-color: white;
     padding: 50px 25% 0 25%;
