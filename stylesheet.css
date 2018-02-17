@@ -5,12 +5,23 @@
     vertical-align: top;
     color: white;
 }
-body {
+/* body {
     background-image: url('Screenshot_20180205-221352.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+} */
+#background {
+    background-image: url('Screenshot_20180205-221352.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: palevioletred;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
 }
 /* #splash {
     width: 100%;
