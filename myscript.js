@@ -10,7 +10,6 @@ $(document).ready(function(){
             "top" : "0px",
         });
     });
-
     $("#main-container").html($("#about-content").html())
 
     $("#navabout").click(function(){
@@ -33,5 +32,8 @@ $(document).ready(function(){
         var content = $("#photos-content").html()
         $("#main-container").html(content)
     });
+    // if(window.innerWidth < 720){
+    //     $("#navcontainer").html(`<i class="material-icons">menu</i>`)
+    // }
 })
 // google maps api key AIzaSyAnjD9kV9KM-ft9pPPchNKQBW427-TlUUw
