@@ -140,6 +140,9 @@ p {
         height: 200%;
     }
 }
+@media screen and (orientation:portrait) {
+    /*  */
+}
 .nav:hover{
     color: black;
     cursor: default;
