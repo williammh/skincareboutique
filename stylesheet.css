@@ -54,7 +54,7 @@ h4 {
 #services-content {
     text-align: center;
 }
-table {
+#servicestable {
     margin-left: 25%;
 }
 td h3 {
@@ -92,7 +92,7 @@ ul {
     height: auto;
     opacity: 1;
     transition-duration: .5s;
-    padding: 50px 0px 50px 0px;
+    padding: 50px 5% 50px 5%;
     background-color: #00000055;
 }
 p {
@@ -102,9 +102,12 @@ p {
 
 #bottombar {
     height: auto;
-    width: 50%;
+    width: 80%;
     background-color: white;
-    padding: 50px 25% 50px 25%;
+    padding: 50px 10% 50px 10%;
+}
+#operatinghours tr td:nth-child(2){
+    width: 120px;
 }
 #navcontainer {
     padding-top: 20px;
@@ -138,6 +141,17 @@ p {
     }
     #main-container {
         height: 200%;
+    }
+    /* #operatinghours {
+        margin-top: 50px;
+    } */
+}
+@media only screen and (max-width: 600px) {
+    #bottombar > .left {
+        display: block;
+    } 
+    #operatinghours {
+        margin-top: 50px;
     }
 }
 @media screen and (orientation:portrait) {

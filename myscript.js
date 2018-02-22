@@ -32,12 +32,9 @@ $(document).ready(function(){
         var content = $("#photos-content").html()
         $("#main-container").html(content)
     });
-    // if(window.innerWidth < 720){
-    //     $("#navcontainer").html(`<i class="material-icons">menu</i>`)
-    // }
     if(window.innerWidth < window.innerHeight){
         $("#main-container").css("height", window.innerHeight);
-        $("#photos-content").html(`<p>window.innerHeight = ${window.innerHeight}</p>`);
+        $("#photos-content").html(`<p>window.innerHeight = ${window.innerHeight}</p><p>window.innerWidth = ${window.innerWidth}</p>`);
     }
 })
 // google maps api key AIzaSyAnjD9kV9KM-ft9pPPchNKQBW427-TlUUw
