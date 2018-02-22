@@ -15,7 +15,7 @@ $(document).ready(function(){
     $("#navabout").click(function(){
         var content = $("#about-content").html()
         $("#main-container").html(content)
-        $("#main-container").css("height", "600px");
+        $("#main-container").css("height", window.innerHeight);
     });
     $("#navservices").click(function(){
         var content = $("#services-content").html()
@@ -25,17 +25,17 @@ $(document).ready(function(){
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
         $("#main-container").html(content)
-        $("#main-container").css("height", "600px");
+        $("#main-container").css("height", window.innerHeight);
     });
     $("#navcontact").click(function(){
         var content = $("#contact-content").html()
         $("#main-container").html(content)
-        $("#main-container").css("height", "600px");
+        $("#main-container").css("height", window.innerHeight);
     });
     $("#navphotos").click(function(){
         var content = $("#photos-content").html()
         $("#main-container").html(content)
-        $("#main-container").css("height", "600px");
+        $("#main-container").css("height", window.innerHeight);
     });
     // to force css rules if a mobile device is in portrait mode AND still has a window innerWidth > 672px
     if(window.innerWidth < window.innerHeight){
@@ -44,7 +44,7 @@ $(document).ready(function(){
             "font-size" : "1.75rem"
         });
         $("li, p").css({
-            "font-size" : "1.75rem"
+            "font-size" : "1.5rem"
         });
         $("#services1, #services2").css({
             "width" : "550px"
