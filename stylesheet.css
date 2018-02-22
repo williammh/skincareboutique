@@ -57,6 +57,19 @@ h4 {
 #servicestable {
     margin-left: 25%;
 }
+#services1, #services2 {
+    display: inline-block;
+    height: auto;
+    width: 400px;
+    margin-bottom: 10px;
+}
+/* @media only screen and (max-width: 600px) {
+    #services1, #services2 {
+        display: block;
+        margin-top: 10px;
+        background-color: rgb(47, 255, 227);
+    }
+} */
 td h3 {
     background-color: white;
 }
@@ -142,9 +155,6 @@ p {
     #main-container {
         height: 200%;
     }
-    /* #operatinghours {
-        margin-top: 50px;
-    } */
 }
 @media only screen and (max-width: 600px) {
     #bottombar > .left {
@@ -154,8 +164,13 @@ p {
         margin-top: 50px;
     }
 }
-@media screen and (orientation:portrait) {
-    /*  */
+@media screen and (orientation:portrait) and (max-width: 600px){
+    h4 {
+        font-size: 1.75rem;
+    }
+    li {
+        font-size: 1.5rem;
+    }
 }
 .nav:hover{
     color: black;
