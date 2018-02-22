@@ -43,6 +43,7 @@ h3 {
     font-size: 1.5rem;
     color: goldenrod;
     margin-left: 25%;
+    margin-bottom: 10px;
     width: 50%;
     background-color: white;
 }
@@ -60,16 +61,9 @@ h4 {
 #services1, #services2 {
     display: inline-block;
     height: auto;
-    width: 400px;
+    width: 300px;
     margin-bottom: 10px;
 }
-/* @media only screen and (max-width: 600px) {
-    #services1, #services2 {
-        display: block;
-        margin-top: 10px;
-        background-color: rgb(47, 255, 227);
-    }
-} */
 td h3 {
     background-color: white;
 }
@@ -122,8 +116,9 @@ p {
 #operatinghours tr td:nth-child(2){
     width: 120px;
 }
-#navcontainer {
+#nav-container {
     padding-top: 20px;
+    margin-left: 50px;
 }
 #mobilenav {
     height: 50px;
@@ -138,15 +133,6 @@ p {
     margin: 0px 15px 0px 15px;
     position: relative;
     transition-duration: .5s;
-}
-.right {
-    /* background-color: pink; */
-    margin-left: 5%;
-}
-@media only screen and (max-width: 950px) {
-    .nav {
-        margin: 0px 5px 0px 5px;
-    }
 }
 @media only screen and (max-width: 720px) {
     .nav {
@@ -164,12 +150,15 @@ p {
         margin-top: 50px;
     }
 }
-@media screen and (orientation:portrait), screen and (max-width: 600px){
+@media screen and (orientation:portrait), screen and (max-width: 672px){
     h4 {
         font-size: 1.75rem;
     }
     li, p {
         font-size: 1.5rem;
+    }
+    #services1, #services2 {
+        width: 550px;
     }
 }
 .nav:hover{
