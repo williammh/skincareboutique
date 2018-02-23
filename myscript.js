@@ -20,8 +20,8 @@ $(document).ready(function(){
     $("#navservices").click(function(){
         var content = $("#services-content").html();
         $("#main-container").html(content);
-        setFontSize();
         $("#main-container").css("height", $(document).height());
+        setFontSize();
     });
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
