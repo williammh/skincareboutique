@@ -44,7 +44,8 @@ $(document).ready(function(){
             "font-size" : "1.75rem"
         });
         $("li, p").css({
-            "font-size" : "1.5rem"
+            "font-size" : "1.5rem",
+            "color" : "lime"
         });
         $("#services1, #services2").css({
             "width" : "550px"
