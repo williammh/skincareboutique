@@ -11,7 +11,8 @@ $(document).ready(function(){
         });
     });
     $("#main-container").html($("#about-content").html())
-
+    $("#main-container").css("height", window.innerHeight);
+    
     $("#navabout").click(function(){
         var content = $("#about-content").html()
         $("#main-container").html(content)
@@ -20,8 +21,8 @@ $(document).ready(function(){
     $("#navservices").click(function(){
         var content = $("#services-content").html();
         $("#main-container").html(content);
-        $("#main-container").css("height", $(document).height());
         setFontSize();
+        $("#main-container").css("height", $(document).height());
     });
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
