@@ -21,7 +21,7 @@ $(document).ready(function(){
         var content = $("#services-content").html()
         $("#main-container").html(content);
         setFontSize();
-        $("#main-container").css("height", "auto");
+        // $("#main-container").css("height", "auto");
     });
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
