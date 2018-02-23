@@ -19,8 +19,8 @@ $(document).ready(function(){
     });
     $("#navservices").click(function(){
         var content = $("#services-content").html()
-        setFontSize();
         $("#main-container").html(content);
+        setFontSize();
         $("#main-container").css("height", "auto");
     });
     $("#navlocation").click(function(){
