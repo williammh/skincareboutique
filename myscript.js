@@ -19,9 +19,9 @@ $(document).ready(function(){
     });
     $("#navservices").click(function(){
         var content = $("#services-content").html()
+        setFontSize();
         $("#main-container").html(content);
         $("#main-container").css("height", "auto");
-        setFontSize();
     });
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
@@ -47,7 +47,6 @@ $(document).ready(function(){
             });
             $("li, p").css({
                 "font-size" : "1.5rem",
-                "color" : "lime"
             });
             $("#services1, #services2").css({
                 "width" : "550px"
