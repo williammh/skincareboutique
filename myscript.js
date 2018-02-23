@@ -19,9 +19,9 @@ $(document).ready(function(){
     });
     $("#navservices").click(function(){
         var content = $("#services-content").html()
+        setFontSize();
         $("#main-container").html(content);
         $("#main-container").css("height", "auto");
-        setFontSize();
     });
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
@@ -41,6 +41,7 @@ $(document).ready(function(){
     // to force css rules if a mobile device is in portrait mode AND still has a window innerWidth > 672px
     function setFontSize(){
         if(window.innerWidth < window.innerHeight){
+            $("#main-container").css("height", window.innerHeight);
             $("h4").css({
                 "font-size" : "1.75rem"
             });
