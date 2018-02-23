@@ -18,10 +18,10 @@ $(document).ready(function(){
         $("#main-container").css("height", window.innerHeight);
     });
     $("#navservices").click(function(){
-        var content = $("#services-content").html()
+        var content = $("#services-content").html();
         $("#main-container").html(content);
         setFontSize();
-        // $("#main-container").css("height", "auto");
+        $("#main-container").css("height", window.innerHeight);
     });
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
