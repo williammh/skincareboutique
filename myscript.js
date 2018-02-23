@@ -10,8 +10,6 @@ $(document).ready(function(){
             "top" : "0px",
         });
     });
-    $("#main-container").css("height", window.innerHeight);
-    setFontSize();
     $("#main-container").html($("#about-content").html())
 
     $("#navabout").click(function(){
@@ -55,5 +53,6 @@ $(document).ready(function(){
             $("#dev").html(`<p>window.innerHeight = ${window.innerHeight}</p><p>window.innerWidth = ${window.innerWidth}</p>`);
         }
     }
+    setFontSize();
 })
 // google maps api key AIzaSyAnjD9kV9KM-ft9pPPchNKQBW427-TlUUw
