@@ -20,8 +20,8 @@ $(document).ready(function(){
     $("#navservices").click(function(){
         var content = $("#services-content").html()
         $("#main-container").html(content);
-        $("#main-container").css("height", "auto");
         setFontSize();
+        $("#main-container").css("height", "auto");
     });
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
@@ -53,6 +53,7 @@ $(document).ready(function(){
             $("#dev").html(`<p>window.innerHeight = ${window.innerHeight}</p><p>window.innerWidth = ${window.innerWidth}</p>`);
         }
     }
+    $("#main-container").css("height", window.innerHeight);
     setFontSize();
 })
 // google maps api key AIzaSyAnjD9kV9KM-ft9pPPchNKQBW427-TlUUw
