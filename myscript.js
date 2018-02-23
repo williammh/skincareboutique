@@ -20,8 +20,9 @@ $(document).ready(function(){
     $("#navservices").click(function(){
         var content = $("#services-content").html()
         $("#main-container").html(content);
-        $("#main-container").css("height", "auto");
         setFontSize();
+        $("#main-container").css("height", "auto");
+        console.log("t");
     });
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
