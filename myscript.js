@@ -21,6 +21,7 @@ $(document).ready(function(){
         var content = $("#services-content").html()
         $("#main-container").html(content);
         $("#main-container").css("height", "auto");
+        setFontSize();
     });
     $("#navlocation").click(function(){
         var content = $("#location-content").html()
@@ -38,19 +39,22 @@ $(document).ready(function(){
         $("#main-container").css("height", window.innerHeight);
     });
     // to force css rules if a mobile device is in portrait mode AND still has a window innerWidth > 672px
-    if(window.innerWidth < window.innerHeight){
-        $("#main-container").css("height", window.innerHeight);
-        $("h4").css({
-            "font-size" : "1.75rem"
-        });
-        $("li, p").css({
-            "font-size" : "1.5rem",
-            "color" : "lime"
-        });
-        $("#services1, #services2").css({
-            "width" : "550px"
-        });
-        $("#dev").html(`<p>window.innerHeight = ${window.innerHeight}</p><p>window.innerWidth = ${window.innerWidth}</p>`);
+    function setFontSize(){
+        if(window.innerWidth < window.innerHeight){
+            $("#main-container").css("height", window.innerHeight);
+            $("h4").css({
+                "font-size" : "1.75rem"
+            });
+            $("li, p").css({
+                "font-size" : "1.5rem",
+                "color" : "lime"
+            });
+            $("#services1, #services2").css({
+                "width" : "550px"
+            });
+            $("#dev").html(`<p>window.innerHeight = ${window.innerHeight}</p><p>window.innerWidth = ${window.innerWidth}</p>`);
+        }
     }
+    setFontSize();
 })
 // google maps api key AIzaSyAnjD9kV9KM-ft9pPPchNKQBW427-TlUUw
