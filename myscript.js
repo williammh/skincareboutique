@@ -19,7 +19,7 @@ $(document).ready(function(){
             top.location.href = document.location.href ;
         }
     }
-    breakout_of_frame()
+    // breakout_of_frame()
     $("#main-container").html($("#about-content").html())
     $("#main-container").css("height", window.innerHeight);
     
