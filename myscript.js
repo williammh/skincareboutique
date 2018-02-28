@@ -10,6 +10,16 @@ $(document).ready(function(){
             "top" : "0px",
         });
     });
+    function breakout_of_frame()
+    {
+        // see https://www.thesitewizard.com/archive/framebreak.shtml
+        // for an explanation of this script and how to use it on your
+        // own website
+        if (top.location != location) {
+            top.location.href = document.location.href ;
+        }
+    }
+    breakout_of_frame()
     $("#main-container").html($("#about-content").html())
     $("#main-container").css("height", window.innerHeight);
     
