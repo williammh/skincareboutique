@@ -84,7 +84,14 @@ td h3 {
     display: inline-block;
     width: auto;
 }
-
+#topbar > .left, #topbar > .right {
+    height: 50px;
+    margin: 0 5% 0 5%;
+}
+/* to align nav with title */
+#topbar > .right {
+    padding-top: 11px;
+}
 .goldennanum {
     color: goldenrod;
     font-family: Nanum Gothic;
@@ -117,8 +124,10 @@ p {
     width: 120px;
 }
 #nav-container {
-    padding-top: 20px;
+    /* padding-top: 20px; */
     margin-left: 50px;
+    display: table-cell;
+    vertical-align: bottom;
 }
 #mobilenav {
     height: 50px;
