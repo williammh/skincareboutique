@@ -8,13 +8,17 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="jquery.slides.min.js"></script>
   <script src="myscript.js"></script>
   <title>Skin Care Boutique</title>
 </head>
 <body>
-  <!-- <div id="splash" class="w3-display-middle">
-    <h1>Skin Care Boutique</h1>
-  </div> -->
+  <div id="splash">
+    <div id="arrow-container" class="w3-display-middle">
+      <h1>Skin Care Boutique</h1>
+      <i class="material-icons goldenrod">arrow_downward</i>
+    </div>
+  </div>
   <div id="background">
 
   </div>
@@ -38,7 +42,7 @@
   </div>
 
   <div id="about-content" class="hidden">
-    <p style="height: 600px; font-size: 1.5rem; margin-top: 10%;">
+    <p>
       Skin Care Boutique invites you to come enjoy and relax
       with our all natural organic and clinical skin treatments. Our goal is to provide
       you best service and educate the client with our products and give you the
@@ -46,6 +50,10 @@
       you develop a healthy life style and wellbeing. We ensure complete
       confidentiality and privacy.
     </p>
+    <div id="buttons">
+      <button id="schedulebutton">Schedule Now</button>
+      <button id="specialsbutton">Specials</button>
+    </div>
   </div>
 
   <div id="services-content" class="hidden">
@@ -143,7 +151,6 @@
       </ul>
     </div>
 
-
     <h3>Facials</h3>
     <div id="services3">
       <ul>
@@ -202,11 +209,16 @@
     <p style="height: 500px;">
       Coming Soon
     </p>
-    <div id="dev">
+    <!-- <div id="slides">
+      <img src="C:\Users\WH\Desktop\Projects\Skin Care Boutique\Screenshot_20180205-221352.png">
+      <img src="C:\Users\WH\Desktop\Projects\Skin Care Boutique\Screenshot_20180205-221407.png">
+      <img src="C:\Users\WH\Desktop\Projects\Skin Care Boutique\Screenshot_20180205-221435.png">
+    </div>
+    <div id="dev"> -->
       
     </div>
   </div>
-
+  
   <div id="bottombar">
     <div class="left">
       <p class="goldennanum">18001 Bothell Everett Highway</p>
@@ -225,6 +237,67 @@
       </table>
     </div>
   </div>
+  <div id="modal">
+    <i class="material-icons" id="hidemodal">expand_more</i>
+    <div id="modal-content">
+      <form action="https://formspree.io/whuynh23@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Appointment Booked">
+        <input type="text" name="name" placeholder="Name">
+        <br>
+        <input type="email" name="_replyto" placeholder="E-Mail">
+        <br>
+        <select>
+          <option value="">Select Appointment</option>
+          <optgroup label="Waxing">
+            <option value="Facial Threading">Facial Threading</option>
+            <option value="Facial Waxing">Facial Waxing</option>
+            <option value="Body Waxing">Body Waxing</option>
+            <option value="Tinting">Tinting</option>
+            <option value="Facial Sugar Waxing">Facial Sugar Waxing</option>
+            <option value="Body Sugar Waxing">Body Sugar Waxing</option>
+            <option value="Makeup">Makeup</option>
+            <option value="Hand & Foot Treatments">Hand & Foot Treatments</option>
+          </optgroup>
+          <optgroup label="Facials">
+              <option value="Beginner Focal Facial">Beginner Focal Facial (Basic)</option>
+              <option value="Deceiving Your Age Facial">Deceiving Your Age Facial</option>
+              <option value="Acne Fighter Facial">Acne Fighter Facial</option>
+              <option value="Acne Relief Facial">Acne Relief Facial</option>
+              <option value="Acne Essential Facial">Acne Essential Facial</option>
+              <option value="Skin Rejuvenate Facial">Skin Rejuvenate Facial</option>
+              <option value="Just You Facial">Just You Facial</option>
+              <option value="Lifting Facial">Lifting Facial</option>
+              <option value="Hydrating Caviar Facial">Hydrating Caviar Facial</option>
+              <option value="Balancing Facial">Balancing Facial</option>
+              <option value="Gentleman's Facial">Gentleman's Facial</option>
+              <option value="Tune Up Facial">Tune Up Facial</option>
+              <option value="Express Facial">Express Facial</option>
+              <option value="Stress Facial">Stress Facial</option>
+              <option value="Soul Body">Soul Body</option>
+              <option value="Hand Treatment">Hand Treatment</option>
+              <option value="Foot Treatment">Foot Treatment</option>
+              <option value="Hand and Foot Treatment">Hand and Foot Treatment</option>
+              <option value="Mystiq Elite Treatment">Mystiq Elite Treatment</option>
+              <option value="Lira Lux Treatment">Lira Lux Treatment</option>
+              <option value="Pumpkin Anti-Aging Treatment">Pumpkin Anti-Aging Treatment</option>
+              <option value="Brightening Plus Treatment">Brightening Plus Treatment</option>
+              <option value="Vita Brite Refresh Level 1">Vita Brite Refresh Level 1</option>
+              <option value="Pumpkin Refresh">Pumpkin Refresh</option>
+              <option value="Lactic Clear Refresh">Lactic Clear Refresh</option>
+              <option value="Green Herb Refresh">Green Herb Refresh</option>
+          </optgroup>
+        </select>
+        <br>
+        <input type="date">
+        <br>
+        <input type="time">
+        <br>
+        <input type="submit" value="Confirm Appointment">
+      </form>
+    </div>
+  </div>
+  <div class="hidden" id="schedule-content">
 
+  </div>
 </body>
 </html>

@@ -2,12 +2,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
         $("#splash").css({
             "opacity" : 0,
-        });
-        $("#main-container").css({
-            "opacity" : 1,
-        });
-        $("#topbar").animate({
-            "top" : "0px",
+            "visibility" : "hidden"
         });
     });
     function breakout_of_frame()
@@ -23,11 +18,14 @@ $(document).ready(function(){
     // breakout_of_frame()
     $("#main-container").html($("#about-content").html())
     $("#main-container").css("height", window.innerHeight);
-    
+    $("#arrow-container > .material-icons").animate({
+        bottom : "0px",
+    })
     $("#navabout").click(function(){
         var content = $("#about-content").html()
         $("#main-container").html(content)
         $("#main-container").css("height", window.innerHeight);
+        enableButtons();
     });
     $("#navservices").click(function(){
         var content = $("#services-content").html();
@@ -50,6 +48,26 @@ $(document).ready(function(){
         $("#main-container").html(content)
         $("#main-container").css("height", window.innerHeight);
     });
+    function showModal(){
+        $("#modal").css({
+            visibility : "visible",
+            top : "20%",
+        })
+    }
+    function hideModal(){
+        $("#modal").css({
+            visibility : "hidden",
+            top : "100%",
+        })
+    }
+    function enableButtons(){
+        $("#schedulebutton, #specialsbutton").click(function(){
+            showModal();
+        })
+        $("#hidemodal").click(function(){
+            hideModal();
+        })
+    }
     // to force css rules if a mobile device is in portrait mode AND still has a window innerWidth > 672px
     function setFontSize(){
         if(window.innerWidth < window.innerHeight){
@@ -65,6 +83,23 @@ $(document).ready(function(){
             $("#dev").html(`<p>window.innerHeight = ${window.innerHeight}</p><p>window.innerWidth = ${window.innerWidth}</p>`);
         }
     }
+    enableButtons();
     setFontSize();
+    $(function(){
+        $("#slides").slidesjs({
+            width: 940,
+            height: 528,
+            start: 1,
+            pagination: {
+                active: true,
+                  // [boolean] Create pagination items.
+                  // You cannot use your own pagination. Sorry.
+                effect: "slide"
+                  // [string] Can be either "slide" or "fade".
+            }
+        });
+    });
 })
 // google maps api key AIzaSyAnjD9kV9KM-ft9pPPchNKQBW427-TlUUw
+
+// slidesjs
