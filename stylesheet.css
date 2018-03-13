@@ -153,6 +153,9 @@ input[type=submit]:hover {
     color: goldenrod;
     cursor: pointer;
 }
+#hidemodal:hover {
+    color: black;
+}
 #modal-content {
     margin-top: 5%;
 }

@@ -1,10 +1,17 @@
 $(document).ready(function(){
-    $(window).scroll(function(){
+    function hideSplash(){
         $("#splash").css({
             "opacity" : 0,
             "visibility" : "hidden"
         });
+    }
+    $(window).scroll(function(){
+        hideSplash();
     });
+    $(window).click(function(){
+        hideSplash();
+    });
+    setTimeout(hideSplash, 2500);
     function breakout_of_frame()
     {
         // see https://www.thesitewizard.com/archive/framebreak.shtml
@@ -60,8 +67,17 @@ $(document).ready(function(){
             top : "100%",
         })
     }
+    function setModalContent(contentid){
+        
+        
+    }
     function enableButtons(){
         $("#schedulebutton, #specialsbutton").click(function(){
+            $("#modal-content").html($("#schedule-content").html());
+            showModal();
+        })
+        $("#specialsbutton").click(function(){
+            $("#modal-content").html($("#special-content").html());
             showModal();
         })
         $("#hidemodal").click(function(){
