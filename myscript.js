@@ -1,4 +1,18 @@
 $(document).ready(function(){
+    var photos = [
+        "Screenshot_20180205-221352.png",
+        "Screenshot_20180205-221407.png",
+        "Screenshot_20180205-221435.png",
+        "unnamed.jpg",
+        "unnamed (1).jpg",
+        "unnamed (2).jpg",
+        "unnamed (3).jpg",
+        "unnamed (4).jpg",
+        "unnamed (5).jpg",
+        "unnamed (6).jpg",
+        "unnamed (7).jpg",
+        "unnamed (8).jpg",
+    ];
     function hideSplash(){
         $("#splash").css({
             "opacity" : 0,
@@ -51,9 +65,20 @@ $(document).ready(function(){
         $("#main-container").css("height", window.innerHeight);
     });
     $("#navphotos").click(function(){
+        var activephotoindex = 0;
         var content = $("#photos-content").html()
         $("#main-container").html(content)
         $("#main-container").css("height", window.innerHeight);
+        $("#slides").html(`<img src="${photos[activephotoindex]}" class="photo">`);
+        setInterval(function(){
+            if(activephotoindex === photos.length - 1){
+                activephotoindex = 0;
+            }
+            else{
+                activephotoindex++;
+            }
+            $("#slides").html(`<img src="${photos[activephotoindex]}" class="photo">`);
+        }, 4000)
     });
     function showModal(){
         $("#modal").css({
@@ -66,10 +91,6 @@ $(document).ready(function(){
             visibility : "hidden",
             top : "100%",
         })
-    }
-    function setModalContent(contentid){
-        
-        
     }
     function enableButtons(){
         $("#schedulebutton, #specialsbutton").click(function(){
@@ -101,20 +122,7 @@ $(document).ready(function(){
     }
     enableButtons();
     setFontSize();
-    $(function(){
-        $("#slides").slidesjs({
-            width: 940,
-            height: 528,
-            start: 1,
-            pagination: {
-                active: true,
-                  // [boolean] Create pagination items.
-                  // You cannot use your own pagination. Sorry.
-                effect: "slide"
-                  // [string] Can be either "slide" or "fade".
-            }
-        });
-    });
+    
 })
 // google maps api key AIzaSyAnjD9kV9KM-ft9pPPchNKQBW427-TlUUw
 

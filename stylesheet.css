@@ -259,5 +259,11 @@ p {
 }
 /* slidesjs */
 #slides {
-    display:none;
+    background-color: #00000055;
+    height: 100%;
+    /* overflow: auto; */
+}
+.photo {
+    height: 100%;
+    width: auto;
 }
