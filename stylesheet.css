@@ -176,7 +176,7 @@ ul {
     opacity: 1;
     transition-duration: .5s;
     padding: 50px 5% 50px 5%;
-    background-color: #00000055;
+    background-color: #00000025;
 }
 p {
     color: white;
@@ -223,6 +223,10 @@ p {
     #main-container {
         height: 200%;
     }
+    /* .photo {
+        height: auto;
+        width: 100%;
+    } */
 }
 @media only screen and (max-width: 600px) {
     #bottombar > .left {
@@ -261,9 +265,12 @@ p {
 #slides {
     background-color: #00000055;
     height: 100%;
-    /* overflow: auto; */
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 .photo {
     height: 100%;
-    width: auto;
+    /* width: auto; */
 }

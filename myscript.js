@@ -1,6 +1,5 @@
 $(document).ready(function(){
     var photos = [
-        "Screenshot_20180205-221352.png",
         "Screenshot_20180205-221407.png",
         "Screenshot_20180205-221435.png",
         "unnamed.jpg",
@@ -69,7 +68,9 @@ $(document).ready(function(){
         var content = $("#photos-content").html()
         $("#main-container").html(content)
         $("#main-container").css("height", window.innerHeight);
-        $("#slides").html(`<img src="${photos[activephotoindex]}" class="photo">`);
+        // $("#slides").html(`<img src="${photos[activephotoindex]}" class="photo">`);
+        $("#slides").css("background-image", `url('${photos[activephotoindex]}')`);
+        // needs clear interval when any other button is clicked
         setInterval(function(){
             if(activephotoindex === photos.length - 1){
                 activephotoindex = 0;
@@ -77,7 +78,9 @@ $(document).ready(function(){
             else{
                 activephotoindex++;
             }
-            $("#slides").html(`<img src="${photos[activephotoindex]}" class="photo">`);
+            console.log(activephotoindex)
+            // $("#slides").html(`<img src="${photos[activephotoindex]}" class="photo">`);
+            $("#slides").css("background-image", `url('${photos[activephotoindex]}')`);
         }, 4000)
     });
     function showModal(){
