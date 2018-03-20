@@ -113,6 +113,9 @@ $(document).ready(function(){
             $("h4").css({
                 "font-size" : "1.75rem"
             });
+            $("#bottombar > .left, #bottombar > .right").css({
+                "display" : "block"
+            })
             $("li, p, td").css({
                 "font-size" : "1.5rem",
             });
