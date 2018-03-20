@@ -99,6 +99,7 @@ td h3 {
 .left, .right {
     display: inline-block;
     width: auto;
+    /* background-color: green; */
 }
 #topbar > .left, #topbar > .right {
     height: 50px;
@@ -190,8 +191,8 @@ p {
     background-color: white;
     padding: 50px 10% 50px 10%;
 }
-#operatinghours tr td:nth-child(2){
-    width: 120px;
+#operatinghours {
+    width: 100%;
 }
 #nav-container {
     /* padding-top: 20px; */
