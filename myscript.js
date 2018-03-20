@@ -12,6 +12,7 @@ $(document).ready(function(){
         "unnamed (7).jpg",
         "unnamed (8).jpg",
     ];
+    var photoindex = 0;
     function hideSplash(){
         $("#splash").css({
             "opacity" : 0,
@@ -25,6 +26,7 @@ $(document).ready(function(){
         hideSplash();
     });
     setTimeout(hideSplash, 2500);
+    setInterval(playSlideshow, 4000);
     function breakout_of_frame()
     {
         // see https://www.thesitewizard.com/archive/framebreak.shtml
@@ -34,6 +36,15 @@ $(document).ready(function(){
         if (top.location != location) {
             top.location.href = document.location.href ;
         }
+    }
+    function playSlideshow(){
+        if(photoindex === photos.length - 1){
+            photoindex = 0;
+        }
+        else{
+            photoindex++;
+        }
+        $("#slides").css("background-image", `url('${photos[photoindex]}')`);
     }
     // breakout_of_frame()
     $("#main-container").html($("#about-content").html())
@@ -62,27 +73,15 @@ $(document).ready(function(){
         var content = $("#contact-content").html()
         $("#main-container").html(content)
         $("#main-container").css("height", window.innerHeight);
+        clearInterval(startSlideshow);
     });
     $("#navphotos").click(function(){
-        var activephotoindex = 0;
         var content = $("#photos-content").html()
         $("#main-container").html(content)
         $("#main-container").css("height", window.innerHeight);
-        // $("#slides").html(`<img src="${photos[activephotoindex]}" class="photo">`);
-        $("#slides").css("background-image", `url('${photos[activephotoindex]}')`);
-        // needs clear interval when any other button is clicked
-        setInterval(function(){
-            if(activephotoindex === photos.length - 1){
-                activephotoindex = 0;
-            }
-            else{
-                activephotoindex++;
-            }
-            console.log(activephotoindex)
-            // $("#slides").html(`<img src="${photos[activephotoindex]}" class="photo">`);
-            $("#slides").css("background-image", `url('${photos[activephotoindex]}')`);
-        }, 4000)
+        $("#slides").css("background-image", `url('${photos[photoindex]}')`);
     });
+    
     function showModal(){
         $("#modal").css({
             visibility : "visible",

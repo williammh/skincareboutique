@@ -176,7 +176,7 @@ ul {
     opacity: 1;
     transition-duration: .5s;
     padding: 50px 5% 50px 5%;
-    background-color: #00000025;
+    /* background-color: #00000025; */
 }
 p {
     color: white;
@@ -204,7 +204,7 @@ p {
     width: 50px;
     background-color: purple;
 }
-#bottombar > .left > p, #bottombar > .left > td {
+#bottombar > .left > p, #bottombar td {
     font-size: 1rem;
 }
 .nav {
