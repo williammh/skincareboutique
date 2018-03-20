@@ -113,7 +113,7 @@ $(document).ready(function(){
             $("h4").css({
                 "font-size" : "1.75rem"
             });
-            $("li, p").css({
+            $("li, p, td").css({
                 "font-size" : "1.5rem",
             });
             $("#services1, #services2").css({
