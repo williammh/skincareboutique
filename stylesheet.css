@@ -284,6 +284,9 @@ td:nth-child(2) {
         width: 80%;
         margin-bottom: 10px;
     }
+    #buttons > div > p {
+        font-size: 3rem;
+    }
 }
 .nav:hover{
     color: black;

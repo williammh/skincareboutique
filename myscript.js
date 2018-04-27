@@ -154,6 +154,9 @@ $(document).ready(function(){
             $("li, p, td").css({
                 "font-size" : "1.5rem",
             });
+            $("#buttons > div > p").css({
+                "font-size" : "3rem",
+            })
             $("#services1, #services2").css({
                 "width" : "550px"
             });
