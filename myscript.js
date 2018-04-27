@@ -47,7 +47,24 @@ $(document).ready(function(){
         $("#slides").css("background-image", `url('${photos[photoindex]}')`);
     }
     // breakout_of_frame()
-    $("#main-container").html($("#about-content").html())
+    function displayHome(){
+        $("#main-container").html($("#about-content").html())
+        //change to promise doesn't change before content is added from line above
+        setTimeout(function(){
+            $("#main-container").css({
+                "height" : "auto",
+            });
+        }, 0)
+    }
+    displayHome();
+    
+
+
+    // $("#main-container").css({
+    //     "height" : "auto",
+    // });
+
+
     $("#main-container").css("height", window.innerHeight);
     $("#arrow-container > .material-icons").animate({
         bottom : "0px",
@@ -55,8 +72,10 @@ $(document).ready(function(){
     $("#navabout").click(function(){
         var content = $("#about-content").html()
         $("#main-container").html(content)
-        $("#main-container").css("height", window.innerHeight);
+        $("#main-container").css("height", "auto");
         enableButtons();
+        
+        
     });
     $("#navservices").click(function(){
         var content = $("#services-content").html();
@@ -105,6 +124,22 @@ $(document).ready(function(){
         })
         $("#hidemodal").click(function(){
             hideModal();
+        })
+        $("#schedulebutton, #specialsbutton").mouseover(function(){
+            $(this).find("p").css({
+                backgroundColor : "#ffffff",
+                color: "goldenrod",
+                top : "25%",
+                padding : "10% 0 10% 0"
+            })
+        })
+        $("#schedulebutton, #specialsbutton").mouseleave(function(){
+            $(this).find("p").css({
+                backgroundColor : "#00000055",
+                color: "white",
+                top : "35%",
+                padding : "5% 0 5% 0"
+            })
         })
     }
     // to force css rules if a mobile device is in portrait mode AND still has a window innerWidth > 672px

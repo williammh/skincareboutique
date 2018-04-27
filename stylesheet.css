@@ -114,19 +114,45 @@ td h3 {
     font-family: Nanum Gothic;
 }
 #buttons {
-    margin-top: 10%;
-}
-#buttons > button {
-    height: 100px;
-    width: 25%;
-    font-size: 2rem;
-    background-color: unset;
-    border: 4px solid white;
-    transition-duration: 0.5s;
-}
-#buttons > button:hover {
+    padding: 50px 0 50px 0;
+    /* height: 2000px; */
+    width: 100%;
     background-color: white;
-    color: goldenrod;
+}
+#schedulebutton, #specialsbutton {
+    height: 400px;
+    width: 40%;
+    font-size: 2rem;
+    /* background-color: unset; */
+    border: unset;
+    transition-duration: 0.5s;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+#schedulebutton:hover, #specialsbutton:hover {
+    background-color: white;
+    /* color: goldenrod; */
+}
+#schedulebutton {
+    background-image: url('Screenshot_20180205-221407.png');
+}
+#specialsbutton {
+    background-image: url('unnamed (8).jpg');
+}
+#schedulebutton > p, #specialsbutton > p {
+    background-color: #00000055;
+    font-family: Poiret One;
+    font-size: 100%;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    padding: 5% 0 5% 0;
+    transition-duration: .5s;
 }
 input[type=submit] {
     border: 2px solid goldenrod;
@@ -176,7 +202,7 @@ ul {
     height: auto;
     opacity: 1;
     transition-duration: .5s;
-    padding: 50px 5% 50px 5%;
+    padding: 50px 0 0 0;
     /* background-color: #00000025; */
 }
 p {
@@ -232,7 +258,7 @@ td:nth-child(2) {
         margin: 0px 5px 0px 5px;
     }
     #main-container {
-        height: 200%;
+        height: auto;
     }
     /* .photo {
         height: auto;
@@ -253,6 +279,10 @@ td:nth-child(2) {
     }
     #services1, #services2 {
         width: 550px;
+    }
+    #buttons > div {
+        width: 80%;
+        margin-bottom: 10px;
     }
 }
 .nav:hover{
