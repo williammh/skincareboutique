@@ -198,6 +198,9 @@ ul {
     font-family: Nanum Gothic;
     margin-bottom: 20px;
 }
+h4, ul {
+    background-color: #00000066;
+}
 #main-container {
     height: auto;
     opacity: 1;
